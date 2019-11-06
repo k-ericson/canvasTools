@@ -59,7 +59,7 @@ for grade in jstuff:
     # write student name and grade at the top of the file
     fout.write('Name: ' + userName+'\nGrade: '+grade['grade']+'/' + str(maxPoints) + '\n\n')
     # add the name and grade to our list for the ABET report file
-    grades.append((grade['grade'], userName))
+    grades.append((float(grade['grade']), userName))
     # for each category (topic) in the rubric, print out the description and grade out of possible points
     for t in range(len(topics)):
         try:
